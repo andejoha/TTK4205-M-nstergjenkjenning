@@ -2,7 +2,6 @@ import numpy as np
 
 
 
-
 def nearestNeighbour(training_set, test_set, N_ROWS, dimension_matrix):
     print("\n# ========== Running: Nearest neighbour classifier ========== #")
     min_error_rate = float('inf')

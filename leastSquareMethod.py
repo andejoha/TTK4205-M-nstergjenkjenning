@@ -41,6 +41,7 @@ def leastSquareMethod(training_set, test_set, N_ROWS, N_COLLUMS, best_error_rate
                     x_test[j][index] = test_set[j][i + 1]
                 index += 1
 
+
         # Create b
         b = calculateB(x_training, N_ROWS)
 

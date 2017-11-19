@@ -45,6 +45,10 @@ def constructDimentionMatrix(dim, N_DIM):
 
 
 def plotResults(best_error_rate_dimension, training_set, test_set, N_ROWS, N_COLLUMS, data_file):
+    data_file,_ = data_file.split(".")
+    name = "results/" + data_file
+
+
     dimension = [best_error_rate_dimension[1]]
 
     result_NN,_,_ = nearestNeighbour(training_set, test_set, N_ROWS, dimension)
@@ -62,8 +66,6 @@ def plotResults(best_error_rate_dimension, training_set, test_set, N_ROWS, N_COL
     result_MER = minimumErrorRate(training_set, test_set, N_ROWS, dimension)
     result_LSM = leastSquareMethod(training_set, test_set, N_ROWS, N_COLLUMS, dimension)
 
-    data_file,_ = data_file.split(".")
-    name = "results/" + data_file
 
     plt.figure(1)
     for row in x_test:
